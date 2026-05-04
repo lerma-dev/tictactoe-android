@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">TicTacToe</string>
+    <string name="title">Tic Tac Toe</string>
+    <!-- Descripciones del tablero de jugadores-->
+    <string name="players">Jugadores</string>
+    <string name="record_x">0</string>
+    <string name="record_o">0</string>
+    <string name="versus">VS</string>
+    <string name="des_img_x">Imagen X</string>
+    <string name="des_img_o">Imagen O</string>
+    <!--Descripciones del tablero de juego -->
+    <string name="des_tablero">Tablero del Juego</string>
+    <string name="des_img_0">Imagen 1</string>
+    <string name="des_img_1">Imagen 2</string>
+    <string name="des_img_2">Imagen 3</string>
+    <string name="des_img_3">Imagen 4</string>
+    <string name="des_img_4">Imagen 5</string>
+    <string name="des_img_5">Imagen 6</string>
+    <string name="des_img_6">Imagen 7</string>
+    <string name="des_img_7">Imagen 8</string>
+    <string name="des_img_8">Imagen 9</string>
+    <!-- Botones -->
+    <string name="buttons">Botones</string>
+    <string name="btn_reset_game">Reiniciar Juego</string>
+    <string name="btn_reset_scores">Reiniciar Records</string>
+    <!-- Mensajes -->
+    <string name="draw">Empate</string>
+    <string name="win_x">!Gano X¡</string>
+    <string name="win_o">!Gano O¡</string>
+</resources>

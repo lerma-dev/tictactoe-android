@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark">#0e0e0e</color>
+    <color name="neon">#FF9800</color>
+    <color name="purple500">#6200EE</color>
+    <color name="azul">#060C43</color>
+    <color name="amarillo">#FFC107</color>
+    <color name="magenta">#E109FA</color>
+    <color name="azul_claro">#2196F3</color>
+    <color name="status_bar">#C57A02</color>
+    <color name="score_color_x">#F44336</color>
+    <color name="score_color_o">#3DC742</color>
+    <color name="active_player">#0446BA</color>
+</resources>

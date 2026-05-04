@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:text="@string/title"
+        android:textColor="@color/neon"
+        android:textStyle="bold"
+        android:textSize="50sp" />
+
+    <LinearLayout
+        android:id="@+id/players"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:gravity="center_vertical"
+        android:contentDescription="@string/players">
+        <!-- Player X -->
+        <ImageView
+            android:id="@+id/image_x"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/des_img_x"
+            android:foreground="@drawable/gato_x"
+            android:background="@drawable/player" />
+
+        <TextView
+            android:id="@+id/record_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/record_x"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+        <!-- Separador de jugadores-->
+        <TextView
+            android:id="@+id/versus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:text="@string/versus"
+            android:textAlignment="center"
+            android:textColor="@color/neon"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <!-- Player O -->
+        <TextView
+            android:id="@+id/record_o"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="@string/record_o"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+        <ImageView
+            android:id="@+id/image_o"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:contentDescription="@string/des_img_o"
+            android:foreground="@drawable/gato_o" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tablero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/des_tablero">
+        <!-- Fila 1 -->
+        <TableRow>
+            <ImageView
+                android:id="@+id/image_1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/des_img_0"
+                android:background="@drawable/ghosty"
+                android:onClick="clickImagen"
+                android:padding="50dp" />
+
+            <ImageView
+                android:id="@+id/image_2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/des_img_1"
+                android:background="@drawable/ghosty"
+                android:onClick="clickImagen"
+                android:padding="50dp" />
+
+            <ImageView
+                android:id="@+id/image_3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/des_img_2"
+                android:background="@drawable/ghosty"
+                android:onClick="clickImagen"
+                android:padding="50dp" />
+        </TableRow>
+        <!-- Fila 2 -->
+        <TableRow>
+            <ImageView
+                android:id="@+id/image_4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/des_img_3"
+                android:background="@drawable/ghosty"
+                android:onClick="clickImagen"
+                android:padding="50dp" />
+
+            <ImageView
+                android:id="@+id/image_5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/des_img_4"
+                android:background="@drawable/ghosty"
+                android:onClick="clickImagen"
+                android:padding="50dp" />
+
+            <ImageView
+                android:id="@+id/image_6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/des_img_5"
+                android:background="@drawable/ghosty"
+                android:onClick="clickImagen"
+                android:padding="50dp" />
+        </TableRow>
+        <!-- Fila 3 -->
+        <TableRow>
+            <ImageView
+                android:id="@+id/image_7"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/des_img_6"
+                android:background="@drawable/ghosty"
+                android:onClick="clickImagen"
+                android:padding="50dp" />
+
+            <ImageView
+                android:id="@+id/image_8"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/des_img_7"
+                android:background="@drawable/ghosty"
+                android:onClick="clickImagen"
+                android:padding="50dp" />
+
+            <ImageView
+                android:id="@+id/image_9"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/des_img_8"
+                android:background="@drawable/ghosty"
+                android:onClick="clickImagen"
+                android:padding="50dp" />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/buttons"
+        tools:ignore="ButtonStyle">
+
+        <Button
+            android:id="@+id/reset_scores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/btn_reset_scores"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/neon"/>
+
+        <Button
+            android:id="@+id/reset_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/btn_reset_game"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/neon" />
+    </LinearLayout>
+
+</LinearLayout>
+
