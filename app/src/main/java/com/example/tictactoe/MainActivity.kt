@@ -9,22 +9,25 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var img1:ImageView
-    lateinit var img2:ImageView
-    lateinit var img3:ImageView
-    lateinit var img4:ImageView
-    lateinit var img5:ImageView
-    lateinit var img6:ImageView
-    lateinit var img7:ImageView
-    lateinit var img8:ImageView
-    lateinit var img9:ImageView
-    lateinit var imgX:ImageView
-    lateinit var imgO:ImageView
-    lateinit var btnResetGame:Button
-    lateinit var btnResetScores:Button
-    lateinit var lblVersus:TextView
-    lateinit var lblRecordX:TextView
-    lateinit var lblRecordO:TextView
+    lateinit var img1: ImageView
+    lateinit var img2: ImageView
+    lateinit var img3: ImageView
+    lateinit var img4: ImageView
+    lateinit var img5: ImageView
+    lateinit var img6: ImageView
+    lateinit var img7: ImageView
+    lateinit var img8: ImageView
+    lateinit var img9: ImageView
+    lateinit var imgX: ImageView
+    lateinit var imgO: ImageView
+    lateinit var btnResetGame: Button
+    lateinit var btnResetScores: Button
+    lateinit var lblVersus: TextView
+    lateinit var lblRecordX: TextView
+    lateinit var lblRecordO: TextView
+    lateinit var lblPlayerX: TextView
+    lateinit var lblPlayerO: TextView
+
 
     var isNext = "x"
     val jugadasGanadoras = arrayOf(
@@ -52,6 +55,25 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        initUI()
+
+        lblPlayerX.text = intent?.extras?.getString("player1").toString()
+        lblPlayerO.text = intent?.extras?.getString("player2").toString()
+
+        btnResetGame.setOnClickListener {
+            resetGame()
+        }
+
+        btnResetScores.setOnClickListener {
+            recordX = 0
+            recordO = 0
+            lblRecordX.text = resources.getString(R.string.record_x)
+            lblRecordO.text = resources.getString(R.string.record_o)
+        }
+    }
+
+
+    fun initUI() {
         img1 = findViewById(R.id.image_1)
         img2 = findViewById(R.id.image_2)
         img3 = findViewById(R.id.image_3)
@@ -68,17 +90,8 @@ class MainActivity : AppCompatActivity() {
         lblVersus = findViewById(R.id.versus)
         lblRecordX = findViewById(R.id.record_x)
         lblRecordO = findViewById(R.id.record_o)
-
-        btnResetGame.setOnClickListener {
-            resetGame()
-        }
-
-        btnResetScores.setOnClickListener {
-            recordX = 0
-            recordO = 0
-            lblRecordX.text = resources.getString(R.string.record_x)
-            lblRecordO.text = resources.getString(R.string.record_o)
-        }
+        lblPlayerX = findViewById(R.id.player_x)
+        lblPlayerO = findViewById(R.id.player_o)
     }
 
     fun clickImagen(view: View){

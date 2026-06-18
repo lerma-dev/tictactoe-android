@@ -3,6 +3,8 @@
     <string name="title">Tic Tac Toe</string>
     <!-- Descripciones del tablero de jugadores-->
     <string name="players">Jugadores</string>
+    <string name="player_x">Player X</string>
+    <string name="player_o">Player O</string>
     <string name="record_x">0</string>
     <string name="record_o">0</string>
     <string name="versus">VS</string>
@@ -23,6 +25,10 @@
     <string name="buttons">Botones</string>
     <string name="btn_reset_game">Reiniciar Juego</string>
     <string name="btn_reset_scores">Reiniciar Records</string>
+    <!-- vista de los jugadores -->
+    <string name="txt_player_1">Escribe nombre del jugador 1</string>
+    <string name="txt_player_2">Escribe nombre del jugador 2</string>
+    <string name="btn_jugar">Jugar</string>
     <!-- Mensajes -->
     <string name="draw">Empate</string>
     <string name="win_x">!Gano X¡</string>
