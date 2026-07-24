@@ -8,9 +8,13 @@
     <color name="azul">#060C43</color>
     <color name="amarillo">#FFC107</color>
     <color name="magenta">#E109FA</color>
-    <color name="azul_claro">#2196F3</color>
+    <color name="azul_claro">#201c4f</color>
     <color name="status_bar">#C57A02</color>
     <color name="score_color_x">#F44336</color>
     <color name="score_color_o">#3DC742</color>
-    <color name="active_player">#0446BA</color>
+    <color name="active_player">#000433</color>
+    <color name="azul_1">#1216e2</color>
+    <color name="azul_2">#201c4f</color>
+    <color name="azul_3">#292070</color>
+    <color name="red">#ff0000</color>
 </resources>

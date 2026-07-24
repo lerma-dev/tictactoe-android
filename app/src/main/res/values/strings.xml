@@ -25,9 +25,10 @@
     <string name="buttons">Botones</string>
     <string name="btn_reset_game">Reiniciar Juego</string>
     <string name="btn_reset_scores">Reiniciar Records</string>
+    <string name="btn_back">Regresar</string>
     <!-- vista de los jugadores -->
-    <string name="txt_player_1">Escribe nombre del jugador 1</string>
-    <string name="txt_player_2">Escribe nombre del jugador 2</string>
+    <string name="txt_player_1">Ingresa nombre del jugador 1</string>
+    <string name="txt_player_2">Ingresa nombre del jugador 2</string>
     <string name="btn_jugar">Jugar</string>
     <!-- Mensajes -->
     <string name="draw">Empate</string>

@@ -1,13 +1,16 @@
-package com.example.tictactoe
+package com.lermadev.tictactoe
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
-class MainActivity : AppCompatActivity() {
+class GameActivity : AppCompatActivity() {
 
     lateinit var img1: ImageView
     lateinit var img2: ImageView
@@ -22,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var imgO: ImageView
     lateinit var btnResetGame: Button
     lateinit var btnResetScores: Button
+    lateinit var btnBack: ImageButton
     lateinit var lblVersus: TextView
     lateinit var lblRecordX: TextView
     lateinit var lblRecordO: TextView
@@ -54,11 +58,17 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_game)
         initUI()
 
         lblPlayerX.text = intent?.extras?.getString("player1").toString()
         lblPlayerO.text = intent?.extras?.getString("player2").toString()
+
+        btnBack.setOnClickListener {
+            val intent = Intent(applicationContext, HomeActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         btnResetGame.setOnClickListener {
             resetGame()
@@ -87,6 +97,7 @@ class MainActivity : AppCompatActivity() {
         imgO = findViewById(R.id.image_o)
         btnResetGame = findViewById(R.id.reset_game)
         btnResetScores = findViewById(R.id.reset_scores)
+        btnBack = findViewById(R.id.btn_back)
         lblVersus = findViewById(R.id.versus)
         lblRecordX = findViewById(R.id.record_x)
         lblRecordO = findViewById(R.id.record_o)
@@ -117,6 +128,7 @@ class MainActivity : AppCompatActivity() {
                     val winnerX = checkWinner(posX)
                     if(winnerX != null){
                         winner = resources.getString(R.string.win_x)
+                        Toast.makeText(this, "¡Gano X!", Toast.LENGTH_LONG).show()
                         for(pos in winnerX){
                             val imgsWinners = obtenerImagen(pos)
                             imgsWinners.setBackgroundResource(R.drawable.winner)
@@ -131,6 +143,7 @@ class MainActivity : AppCompatActivity() {
                     val winnerO = checkWinner(posO)
                     if(winnerO != null){
                         winner = resources.getString(R.string.win_o)
+                        Toast.makeText(this, "¡Gano 0!", Toast.LENGTH_LONG).show()
                         for(pos in winnerO){
                             val imgsWinners = obtenerImagen(pos)
                             imgsWinners.setBackgroundResource(R.drawable.winner)
@@ -151,6 +164,7 @@ class MainActivity : AppCompatActivity() {
             lblVersus.text = winner
         } else if (countX + countO == 9) {
             lblVersus.text = resources.getString(R.string.draw)
+            Toast.makeText(this, "¡Empate!", Toast.LENGTH_LONG).show()
         }
     }
 
